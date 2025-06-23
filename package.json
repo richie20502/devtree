@@ -6,10 +6,12 @@
   "version": "1.0.0",
   "description": "��#\u0000 \u0000d\u0000e\u0000v\u0000t\u0000r\u0000e\u0000e\u0000\r\u0000 \u0000",
   "main": "index.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "node --watch index.js"
+    "dev": "nodemon index.js"
   },
   "repository": {
     "type": "git",
@@ -22,4 +24,3 @@
   },
   "homepage": "https://github.com/richie20502/devtree#readme"
 }
- 
