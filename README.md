@@ -5,4 +5,4 @@
  node --watch index.js
 
  # Kill port 
- npx kill-port 4000
+ npx kill-port 4000 (PUERTO ES 4000)
