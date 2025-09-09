@@ -9,9 +9,9 @@
         "moduleResolution": "NodeNext", // Cómo se resuelven los módulos, optimizado para Node.js con ESNext.
         "module": "NodeNext", // Establece el sistema de módulos (import/export) compatible con Node.js ESNext.
         "strict": false, // Desactiva las verificaciones estrictas de TypeScript (tipado menos estricto).
-        "sourceMap": true, // Genera archivos .map para depuración en el navegador o Node.js.
+        "sourceMap": false, // Genera archivos .map para depuración en el navegador o Node.js.
         "esModuleInterop": true, // Permite importar módulos CommonJS como si fueran ESModules.
-        "declaration": true // Genera archivos .d.ts (declaraciones de tipos) junto al JS compilado.
+        "declaration": false // Genera archivos .d.ts (declaraciones de tipos) junto al JS compilado.
     },
     "include": [ 
         "src/**/*.ts" // Indica qué archivos TypeScript incluir (todos los .ts dentro de src y subcarpetas).
