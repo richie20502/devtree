@@ -6,7 +6,6 @@ import { hashPassword } from '../utils/auth';
 
 export const createAccount =  async (request: Request, response: Response) => {
     let errors =  validationResult(request);
-    console.log(errors);
     if(!errors.isEmpty()){
         return response.status(400).json({errors: errors.array()});
     }
