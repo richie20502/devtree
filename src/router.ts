@@ -8,6 +8,7 @@ const router = Router();
 router.post('/auth/register', async (request, response) => {
     const user = new User(request.body);
     await user.save();
+    response.json({ msg: "Registro Creado Correctamente" });
 });
 
 export default router;
