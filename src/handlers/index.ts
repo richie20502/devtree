@@ -4,12 +4,9 @@ import slug from 'slug'
 import User from "../models/User";
 import { hashPassword, checkPassword } from '../utils/auth';
 
+
 export const createAccount =  async (request: Request, response: Response) => {
-    let errors =  validationResult(request);
-    if(!errors.isEmpty()){
-        return response.status(400).json({errors: errors.array()});
-    }
-    
+
 
     const { email, password } = request.body;
     const userExist = await User.findOne({email});
