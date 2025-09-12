@@ -38,5 +38,13 @@ export const login = async (request: Request, response: Response) => {
     if(!errors.isEmpty()){
         return response.status(400).json({errors: errors.array()});
     }
+
+    const { email, password } = request.body;
+    const user = await User.findOne({email});
+    if(!user){
+        const error = new Error('El usuario no existe !!!');
+        return response.status(404).json({error: error.message});
+    }
+
     console.log("desde el login");
 }
