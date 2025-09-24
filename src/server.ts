@@ -2,9 +2,12 @@ import express from 'express'; // ESM Ecmascript modules
 import 'dotenv/config'
 import router from './router';
 import { connectDB } from './config/db';
-
-const app = express();
+import cors from 'cors';
+import { corsConfig } from './config/cors';
 connectDB();
+const app = express();
+app.use(cors());
+
 // Leer datos de formularios
 app.use(express.json());
 
